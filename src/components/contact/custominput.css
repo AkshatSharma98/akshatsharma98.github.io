@@ -1,0 +1,29 @@
+.custom-input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: flex-start;
+    width: 400px;
+}
+
+.custom-input input {
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 16px;
+    font-weight: 800;
+    color: black;
+    background-color: white;
+}
+
+.custom-input__error {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+    .custom-input {
+        width: 200px;
+    }
+}
+

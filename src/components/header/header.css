@@ -1,0 +1,18 @@
+.header__container {
+    text-align: center;
+    padding-top: 5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.me {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.me img {
+    height: 26rem;
+    width: 75%;
+    border-radius: 4rem 4rem 2rem 2rem;
+}

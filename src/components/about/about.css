@@ -1,0 +1,27 @@
+.about {
+    padding-top: 100px;
+    background: transparent;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-variant);
+    border-radius: 1rem;
+    box-shadow: 2px 2px;
+    transition: all 400ms ease;
+    padding: 2rem 1rem;
+}
+
+.about-card:hover {
+    transform: scale(1.03);
+}
+

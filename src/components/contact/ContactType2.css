@@ -1,0 +1,12 @@
+.contact-type2 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-type2 button {
+   padding: 0.5rem 0.5rem;
+   border-radius: 0.5rem;
+}
