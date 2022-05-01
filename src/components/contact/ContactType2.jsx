@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import "./ContactType2.css"
 import CustomInput from './CustomInput';
 import emailjs from '@emailjs/browser';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const ContactType2 = () => {
   const [name, setName] = useState('');
@@ -11,6 +13,21 @@ const ContactType2 = () => {
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
 
+  const squareVariants = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0, scale: 0 }
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      console.log("In view called");
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  
   const onChangeName = (newValue) => {
     constHideAllErrors();
     setName(newValue);
@@ -98,24 +115,35 @@ const ContactType2 = () => {
   }
 
   return (
-    <div className='container contact-type2'>
-        <CustomInput text = {name}
-                     error = {nameError} 
-                     onChange={onChangeName}
-                     placeHolder={"Enter Your Name"} />
+ <>
+ <div className='container contact-type2__parent'>
+ <h1>Happy to see you here, feel free to drop me a message</h1>
+    <motion.div
+            ref={ref}
+            variants={squareVariants}
+            animate={controls}
+            initial="hidden">
+            <div className='contact-type2' id="contact">
+                <CustomInput text = {name}
+                            error = {nameError} 
+                            onChange={onChangeName}
+                            placeHolder={"Enter Your Name"} />
 
-        <CustomInput text = {email}
-                     error = {emailError} 
-                     onChange={onChangeEmail}
-                     placeHolder={"Enter Your Email"} />  
+                <CustomInput text = {email}
+                            error = {emailError} 
+                            onChange={onChangeEmail}
+                            placeHolder={"Enter Your Email"} />  
 
-        <CustomInput text = {message}
-                     error = {messageError} 
-                     onChange={onChangeMessage}
-                     placeHolder={"Enter Your Message"} />   
+                <CustomInput text = {message}
+                            error = {messageError} 
+                            onChange={onChangeMessage}
+                            placeHolder={"Enter Your Message"} />   
 
-        <button className='contact-type2__button' onClick={onSubmit}>Send</button>                        
+                <button className='contact-type2__button' onClick={onSubmit}>Send</button>                        
+            </div>
+        </motion.div>
     </div>
+    </>
   )
 }
 

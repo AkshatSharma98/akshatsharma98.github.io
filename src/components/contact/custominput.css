@@ -21,9 +21,15 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
-    .custom-input {
-        width: 200px;
+@media screen and (max-width: 600px){
+    .custom-input{
+      width: 300px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .custom-input{
+      width: 200px;
     }
 }
 

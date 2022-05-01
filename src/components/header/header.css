@@ -14,5 +14,13 @@
 .me img {
     height: 26rem;
     width: 75%;
-    border-radius: 4rem 4rem 2rem 2rem;
+    border-radius: 3rem 3rem 0rem 0rem;
+}
+
+.header__container .text-light-1 {
+    font-size: 18px;
+    margin-right: 8px;
+    background-image: linear-gradient(180deg, #00DBDE 0%, #FC00FF 100%);
+    background-clip: text;
+    color: transparent;
 }

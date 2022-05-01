@@ -8,10 +8,9 @@ const App = () => {
     <div>
        <Header />
        <Nav />
-       <About />
-       <Portfolio />
-       <ContactType2 />
        <Experience />
+       <About />
+       <ContactType2 />
        <Footer />
     </div>
   )

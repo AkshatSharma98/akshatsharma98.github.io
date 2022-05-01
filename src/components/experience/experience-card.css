@@ -1,0 +1,30 @@
+.experience-card {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );;
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    border-width: 1rem;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 45%;
+    box-shadow: 2px 2px;
+    transition: transform 250ms;
+}
+
+.experience-card:hover{
+    transform: translateY(-10px) scale(1.1);
+}
+
+.experience-card h3 {
+    background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
+    background-clip: text;
+    color: transparent;
+}
+
+@media screen and (max-width: 700px) {
+    .experience-card {
+        max-width: 80%;
+    }
+}

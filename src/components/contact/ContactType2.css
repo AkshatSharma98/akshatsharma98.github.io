@@ -1,12 +1,51 @@
 .contact-type2 {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     flex-direction: column;
+    align-items: center;
+    padding: 4rem 4rem;
+    border-radius: 2rem;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-type2__parent {
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     align-items: center;
 }
 
 .contact-type2 button {
-   padding: 0.5rem 0.5rem;
+   padding: 0.5rem 1rem;
    border-radius: 0.5rem;
+}
+
+.contact-type2 button:hover {
+    opacity: 0.4;
+}
+
+.contact-type2__parent h1 {
+    font-size: 18px;
+    margin-right: 8px;
+    background-image: radial-gradient( circle 400px at 6.8% 8.3%,  rgba(255,244,169,1) 0%, rgba(255,244,234,1) 100.2% );
+    background-clip: text;
+    color: transparent;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-type2__parent {
+        flex-direction: column;
+    }
+
+    .contact-type2__parent h1 {
+        width: 100%;
+        margin-right: 0px;
+        padding: 0px;
+        padding-bottom: 8px;
+    }
 }
